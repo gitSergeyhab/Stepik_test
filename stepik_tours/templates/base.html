@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {{ list_val.0 }} {% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    <body>
+        <div class="container mt-3">
+
+            <!--NAVBAR-->
+        {% include 'incl/_nav.html' %}
+
+            <!-- HERO -->
+        {% block hdr %}{% endblock %}
+
+            <!-- CARDS -->
+        {% block content %} something... {% endblock %}
+
+        </div>
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Footer -->
+        <footer class="bg-info page-footer font-small cyan darken-3" style="padding-left: 0px;">
+        <p class="text-center text-white mb-0">© 2020 Copyright | Футер: просто чтобы было) <a href="/index" class="text-white">{{ list_val.0 }}</a></p>
+        </footer>
+    </body>
+</html>

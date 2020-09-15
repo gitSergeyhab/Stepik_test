@@ -1,0 +1,11 @@
+<div class="col-4" data-test="card">
+    <img src="{{ v.picture }}" class="card-img-top img-fluid rounded mx-auto d-block" data-test="picture" style="width: 300px; height: 200px;">
+        <div class="card-body ">
+            <h5 class="card-title">{{ v.title }}</h5>
+            <p class="card-text">{{ v.description|truncatechars:60}}</p>
+            <div class="px-3 row justify-content-between">
+                <h6 class="d-inline-block">{{v.date}}, {{v.nights}} дней, {{v.price}} Р </h6> <h6 class="d-inline-block">{{v.stars}} ★</h6>
+            </div>
+            <a href="{% url 'tour' k %}" class="btn btn-block btn-primary" data-test="tourlink">Подробнее</a>
+        </div>
+</div>

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ block.super }} | {{tourx.title}}
+{% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+  <div class="card-body pb-0">
+      <div class="mx-2 row justify-content-between" >
+          <h1 class="card-title d-inline-block pr-3">{{ tourx.title }}</h1> <h2 class="d-inline-block"> {{ tourx.stars }} ★</h2>
+      </div>
+      <div class="mx-2 row justify-content-around" >
+      <p class="card-text lead d-inline-block">{{ tourx.country}} {{city}}</p>
+      <h5 class="d-inline-block">{% for i in tags1 %} <span class="badge badge-pill badge-primary ">{{ i }}</span>{% endfor %}</h5>
+      </div>
+  </div>
+    <div class="row justify-content-around">
+    <div style="width=100%" >
+        <img class="card-img-top" style="height: 100%; width: auto" src="{{ tourx.picture }}" alt="Card image cap">
+    </div>
+    </div>
+  <div class="card-body">
+    <p class="card-text">{{ tourx.description }}</p>
+    <a href="{% url 'k' %}" class="btn btn-success btn-lg" data-test="buybutton">Купить тур за <span data-test="price">{{ tourx.price }}</span></a>
+  </div>
+</div>
+{% endblock %}
