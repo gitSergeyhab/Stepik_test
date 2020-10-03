@@ -1,12 +1,12 @@
 from random import shuffle
-from .data import *
+from .data import tours
 
 
 # рандомные тэги и отели
 def random_tags_hotels(list_values, num):
-    ran = list(range(1, len(list_values)))
-    shuffle(ran)
-    return [list_values[lv] for lv in range(len(list_values)) if lv in ran[:num]]
+    random_list = list(range(1, len(list_values)))
+    shuffle(random_list)
+    return [list_values[lv] for lv in range(len(list_values)) if lv in random_list[:num]]
 
 
 # расчет минимальной и максимальной цены/дней
@@ -27,4 +27,3 @@ def fun_one_city_tours(slug):
         if data["departure"] == slug:
             one_city_tours[number] = data
     return one_city_tours
-
