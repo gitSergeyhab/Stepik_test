@@ -14,7 +14,7 @@
 
 {% block content %}
 <div class="row mt-5" data-test="cards">
-    {% for k, v in one_city_tours.items %}
+    {% for number, data in one_city_tours.items %}
         {% include 'incl/_card.html' %}
     {% endfor %}
 </div>

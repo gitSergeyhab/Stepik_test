@@ -27,8 +27,8 @@ def fun_tours_x(rp):
         if tv["departure"] == rp:
             tours_x[tk] = tv
     return tours_x
-
-# !!
+#
+# # !!
 def bad_re(rp):
     import re
     return re.findall(pattern=r"\/[^\/]+\/$", string=rp)[-1][1:-1]

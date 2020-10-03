@@ -15,8 +15,8 @@
 
 {% block content %}
 <div class="row mt-5" data-test="cards">
-    {% for k, v in tours.items %}
-    {% if k in ran %}
+    {% for number, data in tours.items %}
+    {% if number in ran %}
         {% include 'incl/_card.html' %}
     {% endif %}
     {% endfor %}
