@@ -7,14 +7,14 @@
  <!-- HERO -->
 {% block hdr %}
 <h1 class="display-5 mt-4">Летим <span data-test="from">{{ city }}</span></h1>
-<p class="mb-4" ><b> Найдено <span data-test="tourcount">{{ tours_x|length }}</span> тура</b>, от <span data-test="pricemin">{{ prices.0 }}</span> до <span data-test="pricemax">{{ prices.1 }}</span> и от <span data-test="nightsmax">{{ days.0 }}</span> ночей до <span data-test="nightsmax">{{ days.1 }}</span> ночей</p>
+<p class="mb-4" ><b> Найдено <span data-test="tourcount">{{ one_city_tours|length }}</span> тура</b>, от <span data-test="pricemin">{{ prices.0 }}</span> до <span data-test="pricemax">{{ prices.1 }}</span> и от <span data-test="nightsmax">{{ days.0 }}</span> ночей до <span data-test="nightsmax">{{ days.1 }}</span> ночей</p>
 {% endblock %}
 
 <!-- CARDS -->
 
 {% block content %}
 <div class="row mt-5" data-test="cards">
-    {% for k, v in tours_x.items %}
+    {% for k, v in one_city_tours.items %}
         {% include 'incl/_card.html' %}
     {% endfor %}
 </div>

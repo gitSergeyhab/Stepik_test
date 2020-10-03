@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} {{ list_val.0 }} {% endblock %}</title>
+    <title>{% block title %} {{ list_variables.0 }} {% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
     <body style=" position: relative; ">
@@ -24,13 +24,9 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <!-- Footer -->
-<!--        <footer class="navbar-fixed-bottom row-fluid">-->
-<!--        <p class="text-center text-white mb-0">© 2020 Копирайт и всё такое | Футер: просто чтобы было) <a href="/index" class="text-white">{{ list_val.0 }}</a></p>-->
-<!--        </footer>-->
         <footer class="navbar fixed-bottom navbar-info bg-info py-0">
             <div class="navbar-brand mx-auto d-block">
-                <p class="mb-0 text-white" style="font-size: 14px">© 2020 Копирайт и всё такое | Футер: просто чтобы было) | <a href="/index" class="text-white">{{ list_val.0 }}</a></p>
+                <p class="mb-0 text-white" style="font-size: 14px">© 2020 Копирайт и всё такое | Футер: просто чтобы было) | <a href="/index" class="text-white">{{ list_variables.0 }}</a></p>
             </div>
         </footer>
     </body>
